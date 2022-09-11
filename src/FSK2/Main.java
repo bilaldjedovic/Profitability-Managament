@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-
+// TASK 4
         System.out.println("Type message to check:");
 
         while (true) {
@@ -21,6 +21,45 @@ class Main {
                 System.out.println("Out of patterns");
             }
         }
+
+        //TASK 2
+        System.out.println("Type message to check:");
+
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+
+            String input = scanner.nextLine();
+
+            if (input.equals("STOP") || input.equals("")) {
+                break;
+            } else if (
+                    input.matches("(?:You have g0t)\\s[1-9]+[0-9]*\\s(?:K\\.y\\+s\\sfrom)\\s\\+[1-9]+[0-9]*\\.\\s(?:Thank u for using International Airtym)\\s(?:Tr\\}s\\[fer\\])\\s(?:brought to u by)\\s(?:Dt\\[a\\]C\\-Thailand and Ooredoo.)\\s(?:\\(Ref\\:[1-9]{6,}\\))")
+            ){
+                System.out.println("Message passed patterns-A2P");
+            } else {
+                System.out.println("Out of patterns");
+            }
+        }
+// task 1
+
+        System.out.println("Type message to check:");
+
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+
+            String input = scanner.nextLine();
+
+            if (input.equals("STOP") || input.equals("")) {
+                break;
+            } else if (input.matches("[A-Z]\\-[0-9]{3,}[\\s\\w]*.")
+                    || input.matches("[A-Z]-[0-9]{6}\\s(?:is your verification code\\.)$")
+                    || input.matches("G\\-[0-9]{6}\\s(?:is your verification code\\.)$")){
+                System.out.println("Message passed patterns-A2P");
+            } else {
+                System.out.println("Out of patterns");
+            }
+        }
+
     }
 }
 
